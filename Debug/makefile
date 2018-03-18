@@ -37,19 +37,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: lib327_Proj4_Lib.a
+all: lib327_Proj5_Lib.a
 
 # Tool invocations
-lib327_Proj4_Lib.a: $(OBJS) $(USER_OBJS)
+lib327_Proj5_Lib.a: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Archiver'
-	ar -r  "lib327_Proj4_Lib.a" $(OBJS) $(USER_OBJS) $(LIBS)
+	ar -r  "lib327_Proj5_Lib.a" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(ARCHIVES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) lib327_Proj4_Lib.a
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(ARCHIVES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) lib327_Proj5_Lib.a
 	-@echo ' '
 
 .PHONY: all clean dependents

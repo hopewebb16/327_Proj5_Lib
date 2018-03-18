@@ -7,8 +7,10 @@
 
 #ifndef CONSTANTS_H_
 #define CONSTANTS_H_
+#include <string>
 
 const std::string I_DO_NOT_HAVE_A_WATCH = "I do not have a watch";
+const std::string THE_CURRENT_TIME_IS = "The current time is:";
 
 //nationalities
 const std::string AMERICAN = "AMERICAN";

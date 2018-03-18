@@ -12,9 +12,11 @@
 #include "./includes/Watch.h"
 #include "./includes/constants.h"
 
-//create a vector with a brit,american, donut enthusiest using unique pointers
-//use c++11 and then returning by value is fine since the compiler will move the vector
-//on return rather than recreate it(if using C++11).
+//create a vector with appropriate numbers of Smalltalk_Brit,Smalltalk_American and ST_American_DonutEnthusiest
+//objects using unique pointers.  Watches are given sequentially starting with first person in the vector until 
+//all watches given or everyone has a watch (case where more watches than people)
+//Since we are using c++11 returning this vector by value is fine since the 
+//compiler will move the vector on return rather than recreate it (this means there is no copy penalty)
 std::vector<std::unique_ptr<Smalltalk>> getPeople(int numBrit,
 		int numAmerican, int numbAmericanDonutEnthusiest,
 		int numWatches) {
@@ -35,3 +37,6 @@ std::vector<std::unique_ptr<Smalltalk>> getPeople(int numBrit,
 
 	//return your vector
 }
+
+
+

@@ -6,7 +6,7 @@ class Smalltalk_Brit :
 {
 public:
 	//create with appropriate phrases
-	Smalltalk_Brit(int i=1);
+	Smalltalk_Brit(int iPerson=1);
 	virtual ~Smalltalk_Brit(void);
 	virtual void populatePhrases(); 
 };

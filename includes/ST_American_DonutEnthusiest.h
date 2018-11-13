@@ -5,7 +5,7 @@ class ST_American_DonutEnthusiest :
 {
 public:
 	//create with appropriate phrases
-	ST_American_DonutEnthusiest(int i =1);
+	ST_American_DonutEnthusiest(int iPerson=1);
 	virtual ~ST_American_DonutEnthusiest(void);
 	
 	//base class populatePhrases() will be called first as part of its construction

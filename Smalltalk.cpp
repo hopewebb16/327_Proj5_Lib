@@ -4,10 +4,12 @@
  *  Created on: Apr 5, 2019
  *      Author: Hope
  */
+#include "includes/Smalltalk.h"
+#include "includes/constants.h"
 using namespace std;
 
 //derived class will set Nationality, iPerson. iPerson is just a counter used to distinguish between objects of the same type
-	Smalltalk::Smalltalk(std::string myNationality,int iPerson=1):nationality(myNationality), iPerson(iPerson), current_phrase(0), pWatch(0){
+	Smalltalk::Smalltalk(std::string myNationality,int iPerson=1):nationality(myNationality), iPerson(iPerson), current_phrase(0), pWatch(NULL){
 
 	}
 
@@ -15,6 +17,7 @@ using namespace std;
 	Smalltalk:: ~Smalltalk(void) {
 		if (pWatch !=0){
 			delete pWatch;
+			pWatch = NULL;
 		}
 	}
 
@@ -45,13 +48,14 @@ using namespace std;
 	//can use the watch.  Set this->pWatch =NULL.  This transaction simulates giving up a watch
 	//this is one of the few times when a shallow copy is appropriate
 	Watch* Smalltalk::takeWatch(){
-		Watch *temp;
+		//I used programminghomeworkhelper.com to help me with this
+		Watch *temp = this-> pWatch;
 
-		if (pWatch ==0){
-			return pWatch;
+		if (pWatch != NULL){
+			this-> pWatch = NULL;
 		}
-		tmep = pWatch;
-		this-> pWatch = NULL;
+
+
 		return temp;
 	}
 
@@ -59,11 +63,13 @@ using namespace std;
 	//otherwise accept watch (return true) and set this->pWatch=pWatch
 	//this is one of the few times when a shallow copy is appropriate
 	bool giveWatch(Watch *pWatch){
-		if (pWatch == 0){
+		//I used programminghomeworkhelper.com to help me with this
+		if (this->pWatch != NULL){
 			return false;
 		}
-		this ->pWatch = pWatch;
-		return true;
+
+		this->pWatch = pWatch;
+		return  true;
 	}
 
 
